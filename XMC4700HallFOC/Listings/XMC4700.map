@@ -1,0 +1,703 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.main) refers to mcuinit.o(i.MCUInit) for MCUInit
+    main.o(i.main) refers to mcuinit.o(i.Delay_ms) for Delay_ms
+    mcuinit.o(i.Delay_ms) refers to mcuinit.o(.data) for timingdelay
+    mcuinit.o(i.MCUInit) refers to system_xmc4700.o(i.SystemInit) for SystemInit
+    mcuinit.o(i.MCUInit) refers to system_xmc4700.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    mcuinit.o(i.MCUInit) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC0) for SystemCoreClock
+    mcuinit.o(i.SysTick_Handler) refers to mcuinit.o(.data) for cnt
+    ccu8.o(i.CCU8_Init) refers to ccu8.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    ccu8.o(i.CCU8_Init) refers to ccu8.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    xmc4_scu.o(i.XMC_SCU_CLOCK_EnableHighPerformanceOscillator) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetCcuClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemClockFrequency) for XMC_SCU_CLOCK_GetSystemClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetEbuClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency) for XMC_SCU_CLOCK_GetSystemPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetExternalOutputClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency) for XMC_SCU_CLOCK_GetSystemPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetExternalOutputClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemClockFrequency) for XMC_SCU_CLOCK_GetSystemClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetExternalOutputClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbPllClockFrequency) for XMC_SCU_CLOCK_GetUsbPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetPeripheralClockFrequency) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC0) for SystemCoreClock
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemClockFrequency) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC0) for SystemCoreClock
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockSourceFrequency) for XMC_SCU_CLOCK_GetSystemPllClockSourceFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockSourceFrequency) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency) for XMC_SCU_CLOCK_GetSystemPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbPllClockFrequency) for XMC_SCU_CLOCK_GetUsbPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbPllClockFrequency) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_GetWdtClockFrequency) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency) for XMC_SCU_CLOCK_GetSystemPllClockFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemClockSource) for XMC_SCU_CLOCK_SetSystemClockSource
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_HIB_EnableHibernateDomain) for XMC_SCU_HIB_EnableHibernateDomain
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableLowPowerOscillator) for XMC_SCU_CLOCK_EnableLowPowerOscillator
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_IsLowPowerOscillatorStable) for XMC_SCU_CLOCK_IsLowPowerOscillatorStable
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_HIB_SetStandbyClockSource) for XMC_SCU_HIB_SetStandbyClockSource
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetBackupClockCalibrationMode) for XMC_SCU_CLOCK_SetBackupClockCalibrationMode
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemClockDivider) for XMC_SCU_CLOCK_SetSystemClockDivider
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetCpuClockDivider) for XMC_SCU_CLOCK_SetCpuClockDivider
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetCcuClockDivider) for XMC_SCU_CLOCK_SetCcuClockDivider
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetPeripheralClockDivider) for XMC_SCU_CLOCK_SetPeripheralClockDivider
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableHighPerformanceOscillator) for XMC_SCU_CLOCK_EnableHighPerformanceOscillator
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable) for XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_DisableSystemPll) for XMC_SCU_CLOCK_DisableSystemPll
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableSystemPll) for XMC_SCU_CLOCK_EnableSystemPll
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_StartSystemPll) for XMC_SCU_CLOCK_StartSystemPll
+    xmc4_scu.o(i.XMC_SCU_CLOCK_Init) refers to system_xmc4700.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    xmc4_scu.o(i.XMC_SCU_CLOCK_SetBackupClockCalibrationMode) refers to xmc4_scu.o(i.XMC_SCU_lDelay) for XMC_SCU_lDelay
+    xmc4_scu.o(i.XMC_SCU_CLOCK_StartSystemPll) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemPllClockSource) for XMC_SCU_CLOCK_SetSystemPllClockSource
+    xmc4_scu.o(i.XMC_SCU_CLOCK_StartSystemPll) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_StartSystemPll) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_StepSystemPllFrequency) for XMC_SCU_CLOCK_StepSystemPllFrequency
+    xmc4_scu.o(i.XMC_SCU_CLOCK_StepSystemPllFrequency) refers to xmc4_scu.o(i.XMC_SCU_lDelay) for XMC_SCU_lDelay
+    xmc4_scu.o(i.XMC_SCU_GetTemperatureMeasurement) refers to xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorEnabled) for XMC_SCU_IsTemperatureSensorEnabled
+    xmc4_scu.o(i.XMC_SCU_HIB_EnterHibernateStateEx) refers to xmc4_scu.o(i.XMC_SCU_HIB_EnterHibernateState) for XMC_SCU_HIB_EnterHibernateState
+    xmc4_scu.o(i.XMC_SCU_INTERRUPT_SetEventHandler) refers to xmc4_scu.o(.bss) for event_handler_list
+    xmc4_scu.o(i.XMC_SCU_IRQHandler) refers to xmc4_scu.o(i.XMC_SCU_INTERUPT_GetEventStatus) for XMC_SCU_INTERUPT_GetEventStatus
+    xmc4_scu.o(i.XMC_SCU_IRQHandler) refers to xmc4_scu.o(i.XMC_SCU_INTERRUPT_ClearEventStatus) for XMC_SCU_INTERRUPT_ClearEventStatus
+    xmc4_scu.o(i.XMC_SCU_IRQHandler) refers to xmc4_scu.o(.bss) for event_handler_list
+    xmc4_scu.o(i.XMC_SCU_StartTemperatureMeasurement) refers to xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorEnabled) for XMC_SCU_IsTemperatureSensorEnabled
+    xmc4_scu.o(i.XMC_SCU_StartTemperatureMeasurement) refers to xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorBusy) for XMC_SCU_IsTemperatureSensorBusy
+    xmc4_scu.o(i.XMC_SCU_lDelay) refers to system_xmc4700.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    xmc4_scu.o(i.XMC_SCU_lDelay) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC0) for SystemCoreClock
+    xmc_ccu4.o(i.XMC_CCU4_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset) for XMC_SCU_RESET_AssertPeripheralReset
+    xmc_ccu4.o(i.XMC_CCU4_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock) for XMC_SCU_CLOCK_GatePeripheralClock
+    xmc_ccu4.o(i.XMC_CCU4_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableClock) for XMC_SCU_CLOCK_EnableClock
+    xmc_ccu4.o(i.XMC_CCU4_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock) for XMC_SCU_CLOCK_UngatePeripheralClock
+    xmc_ccu4.o(i.XMC_CCU4_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset) for XMC_SCU_RESET_DeassertPeripheralReset
+    xmc_ccu4.o(i.XMC_CCU4_Init) refers to xmc_ccu4.o(i.XMC_CCU4_EnableModule) for XMC_CCU4_EnableModule
+    xmc_ccu8.o(i.XMC_CCU8_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset) for XMC_SCU_RESET_AssertPeripheralReset
+    xmc_ccu8.o(i.XMC_CCU8_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock) for XMC_SCU_CLOCK_GatePeripheralClock
+    xmc_ccu8.o(i.XMC_CCU8_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableClock) for XMC_SCU_CLOCK_EnableClock
+    xmc_ccu8.o(i.XMC_CCU8_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock) for XMC_SCU_CLOCK_UngatePeripheralClock
+    xmc_ccu8.o(i.XMC_CCU8_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset) for XMC_SCU_RESET_DeassertPeripheralReset
+    xmc_ccu8.o(i.XMC_CCU8_Init) refers to xmc_ccu8.o(i.XMC_CCU8_EnableModule) for XMC_CCU8_EnableModule
+    xmc_common.o(i.XMC_LIST_Add) refers to xmc_common.o(i.XMC_LIST_GetTail) for XMC_LIST_GetTail
+    xmc_posif.o(i.XMC_POSIF_Disable) refers to xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset) for XMC_SCU_RESET_AssertPeripheralReset
+    xmc_posif.o(i.XMC_POSIF_Disable) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock) for XMC_SCU_CLOCK_GatePeripheralClock
+    xmc_posif.o(i.XMC_POSIF_Enable) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_EnableClock) for XMC_SCU_CLOCK_EnableClock
+    xmc_posif.o(i.XMC_POSIF_Enable) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock) for XMC_SCU_CLOCK_UngatePeripheralClock
+    xmc_posif.o(i.XMC_POSIF_Enable) refers to xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset) for XMC_SCU_RESET_DeassertPeripheralReset
+    xmc_posif.o(i.XMC_POSIF_Init) refers to xmc_posif.o(i.XMC_POSIF_Enable) for XMC_POSIF_Enable
+    xmc_uart.o(i.XMC_UART_CH_Init) refers to xmc_usic.o(i.XMC_USIC_CH_Enable) for XMC_USIC_CH_Enable
+    xmc_uart.o(i.XMC_UART_CH_Init) refers to xmc_usic.o(i.XMC_USIC_CH_SetBaudrate) for XMC_USIC_CH_SetBaudrate
+    xmc_uart.o(i.XMC_UART_CH_SetBaudrate) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetPeripheralClockFrequency) for XMC_SCU_CLOCK_GetPeripheralClockFrequency
+    xmc_uart.o(i.XMC_UART_CH_SetBaudrate) refers to xmc_usic.o(i.XMC_USIC_CH_SetBaudrate) for XMC_USIC_CH_SetBaudrate
+    xmc_usic.o(i.XMC_USIC_CH_Enable) refers to xmc_usic.o(i.XMC_USIC_Enable) for XMC_USIC_Enable
+    xmc_usic.o(i.XMC_USIC_CH_SetBaudrate) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GetPeripheralClockFrequency) for XMC_SCU_CLOCK_GetPeripheralClockFrequency
+    xmc_usic.o(i.XMC_USIC_Disable) refers to xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset) for XMC_SCU_RESET_AssertPeripheralReset
+    xmc_usic.o(i.XMC_USIC_Disable) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock) for XMC_SCU_CLOCK_GatePeripheralClock
+    xmc_usic.o(i.XMC_USIC_Enable) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock) for XMC_SCU_CLOCK_UngatePeripheralClock
+    xmc_usic.o(i.XMC_USIC_Enable) refers to xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset) for XMC_SCU_RESET_DeassertPeripheralReset
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundAbortSequence) refers to xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundDisableArbitrationSlot) for XMC_VADC_GROUP_BackgroundDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundAbortSequence) refers to xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundEnableArbitrationSlot) for XMC_VADC_GROUP_BackgroundEnableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundAbortSequence) refers to xmc_vadc.o(.constdata) for g_xmc_vadc_group_array
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundInit) refers to xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundDisableArbitrationSlot) for XMC_VADC_GROUP_BackgroundDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundInit) refers to xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundEnableArbitrationSlot) for XMC_VADC_GROUP_BackgroundEnableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundInit) refers to xmc_vadc.o(.constdata) for g_xmc_vadc_group_array
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset) for XMC_SCU_RESET_AssertPeripheralReset
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_DisableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock) for XMC_SCU_CLOCK_GatePeripheralClock
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock) for XMC_SCU_CLOCK_UngatePeripheralClock
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_EnableModule) refers to xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset) for XMC_SCU_RESET_DeassertPeripheralReset
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_Init) refers to xmc_vadc.o(i.XMC_VADC_GLOBAL_EnableModule) for XMC_VADC_GLOBAL_EnableModule
+    xmc_vadc.o(i.XMC_VADC_GLOBAL_StartupCalibration) refers to xmc_vadc.o(.constdata) for g_xmc_vadc_group_array
+    xmc_vadc.o(i.XMC_VADC_GROUP_CheckSlaveReadiness) refers to xmc_vadc.o(.constdata) for g_xmc_vadc_group_array
+    xmc_vadc.o(i.XMC_VADC_GROUP_GetResultFifoHead) refers to xmc_vadc.o(i.XMC_VADC_GROUP_IsResultRegisterFifoHead) for XMC_VADC_GROUP_IsResultRegisterFifoHead
+    xmc_vadc.o(i.XMC_VADC_GROUP_GetResultFifoTail) refers to xmc_vadc.o(i.XMC_VADC_GROUP_IsResultRegisterFifoHead) for XMC_VADC_GROUP_IsResultRegisterFifoHead
+    xmc_vadc.o(i.XMC_VADC_GROUP_IgnoreSlaveReadiness) refers to xmc_vadc.o(.constdata) for g_xmc_vadc_group_array
+    xmc_vadc.o(i.XMC_VADC_GROUP_Init) refers to xmc_vadc.o(i.XMC_VADC_GROUP_InputClassInit) for XMC_VADC_GROUP_InputClassInit
+    xmc_vadc.o(i.XMC_VADC_GROUP_QueueAbortSequence) refers to xmc_vadc.o(i.XMC_VADC_GROUP_QueueDisableArbitrationSlot) for XMC_VADC_GROUP_QueueDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GROUP_QueueInit) refers to xmc_vadc.o(i.XMC_VADC_GROUP_QueueDisableArbitrationSlot) for XMC_VADC_GROUP_QueueDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GROUP_QueueRemoveChannel) refers to xmc_vadc.o(i.XMC_VADC_GROUP_QueueDisableArbitrationSlot) for XMC_VADC_GROUP_QueueDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GROUP_QueueRemoveChannel) refers to xmc_vadc.o(i.XMC_VADC_GROUP_QueueGetLength) for XMC_VADC_GROUP_QueueGetLength
+    xmc_vadc.o(i.XMC_VADC_GROUP_ScanInit) refers to xmc_vadc.o(i.XMC_VADC_GROUP_ScanDisableArbitrationSlot) for XMC_VADC_GROUP_ScanDisableArbitrationSlot
+    xmc_vadc.o(i.XMC_VADC_GROUP_ScanSequenceAbort) refers to xmc_vadc.o(i.XMC_VADC_GROUP_ScanDisableArbitrationSlot) for XMC_VADC_GROUP_ScanDisableArbitrationSlot
+    startup_xmc4700.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_xmc4700.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_xmc4700.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_xmc4700.o(RESET) refers to startup_xmc4700.o(STACK) for __initial_sp
+    startup_xmc4700.o(RESET) refers to startup_xmc4700.o(.text) for Reset_Handler
+    startup_xmc4700.o(RESET) refers to mcuinit.o(i.SysTick_Handler) for SysTick_Handler
+    startup_xmc4700.o(RESET) refers to posif.o(i.POSIF0_0_IRQHandler) for POSIF0_0_IRQHandler
+    startup_xmc4700.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_xmc4700.o(.text) refers to startup_xmc4700.o(STACK) for __initial_sp
+    startup_xmc4700.o(.text) refers to system_xmc4700.o(i.SystemInit) for SystemInit
+    startup_xmc4700.o(.text) refers to __main.o(!!!main) for __main
+    startup_xmc4700.o(.text) refers to startup_xmc4700.o(HEAP) for Heap_Mem
+    system_xmc4700.o(i.SystemCoreClockSetup) refers to system_xmc4700.o(i.delay) for delay
+    system_xmc4700.o(i.SystemCoreClockSetup) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    system_xmc4700.o(i.SystemCoreClockSetup) refers to system_xmc4700.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    system_xmc4700.o(i.SystemCoreClockUpdate) refers to system_xmc4700.o(i.OSCHP_GetFrequency) for OSCHP_GetFrequency
+    system_xmc4700.o(i.SystemCoreClockUpdate) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC0) for SystemCoreClock
+    system_xmc4700.o(i.SystemCoreSetup) refers to startup_xmc4700.o(RESET) for __Vectors
+    system_xmc4700.o(i.SystemInit) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    system_xmc4700.o(i.SystemInit) refers to system_xmc4700.o(i.SystemCoreSetup) for SystemCoreSetup
+    system_xmc4700.o(i.SystemInit) refers to system_xmc4700.o(i.SystemCoreClockSetup) for SystemCoreClockSetup
+    system_xmc4700.o(i.SystemInit) refers to system_xmc4700.o(.ARM.__AT_0x2003FFC4) for g_chipid
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_xmc4700.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000001) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000001) refers to fpinit.o(x$fpl$fpinit) for _fp_init
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing mcuinit.o(.rev16_text), (4 bytes).
+    Removing mcuinit.o(.revsh_text), (4 bytes).
+    Removing mcuinit.o(.rrx_text), (6 bytes).
+    Removing mcuinit.o(i.Delay), (32 bytes).
+    Removing ccu8.o(.rev16_text), (4 bytes).
+    Removing ccu8.o(.revsh_text), (4 bytes).
+    Removing ccu8.o(.rrx_text), (6 bytes).
+    Removing ccu8.o(i.CCU8_Init), (836 bytes).
+    Removing ccu8.o(i.NVIC_EnableIRQ), (22 bytes).
+    Removing ccu8.o(i.NVIC_SetPriority), (40 bytes).
+    Removing ccu4.o(.rev16_text), (4 bytes).
+    Removing ccu4.o(.revsh_text), (4 bytes).
+    Removing ccu4.o(.rrx_text), (6 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rrx_text), (6 bytes).
+    Removing gpio.o(i.GPIO_Init), (2 bytes).
+    Removing posif.o(.rev16_text), (4 bytes).
+    Removing posif.o(.revsh_text), (4 bytes).
+    Removing posif.o(.rrx_text), (6 bytes).
+    Removing posif.o(i.POSIF_Hal_Start), (2 bytes).
+    Removing posif.o(i.POSIF_Init), (268 bytes).
+    Removing xmc4_scu.o(.rev16_text), (4 bytes).
+    Removing xmc4_scu.o(.revsh_text), (4 bytes).
+    Removing xmc4_scu.o(.rrx_text), (6 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableClock), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableHighPerformanceOscillator), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableHighPerformanceOscillatorGeneralPurposeInput), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableLowPowerOscillator), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableLowPowerOscillatorGeneralPurposeInput), (44 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableSystemPll), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_DisableUsbPll), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableClock), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableHighPerformanceOscillator), (72 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableHighPerformanceOscillatorGeneralPurposeInput), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableLowPowerOscillator), (96 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableLowPowerOscillatorGeneralPurposeInput), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableSystemPll), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_EnableUsbPll), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GatePeripheralClock), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetCcuClockFrequency), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetEbuClockFrequency), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetExternalOutputClockFrequency), (84 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetHighPerformanceOscillatorGeneralPurposeInputStatus), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetLowPowerOscillatorGeneralPurposeInputStatus), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetPeripheralClockFrequency), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemClockFrequency), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockFrequency), (96 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetSystemPllClockSourceFrequency), (32 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbClockFrequency), (60 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetUsbPllClockFrequency), (60 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_GetWdtClockFrequency), (68 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_Init), (142 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsClockEnabled), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsLowPowerOscillatorStable), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsPeripheralClockGated), (36 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsSystemPllLocked), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_IsUsbPllLocked), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetBackupClockCalibrationMode), (60 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetCcuClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetCpuClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetEbuClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetExternalOutputClockDivider), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetExternalOutputClockSource), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetPeripheralClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemClockSource), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetSystemPllClockSource), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetUsbClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetUsbClockSource), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetWdtClockDivider), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_SetWdtClockSource), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_StartSystemPll), (308 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_StartUsbPll), (88 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_StepSystemPllFrequency), (36 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_StopSystemPll), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_StopUsbPll), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CLOCK_UngatePeripheralClock), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_CalibrateTemperatureSensor), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_DisableOutOfRangeComparator), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_DisableTemperatureSensor), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_EnableOutOfRangeComparator), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_EnableTemperatureSensor), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_GetBootMode), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_GetTemperatureMeasurement), (32 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_ClearEventStatus), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_DisableEvent), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_DisableHibernateDomain), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_DisableInternalSlowClock), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_EnableEvent), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_EnableHibernateDomain), (76 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_EnableInternalSlowClock), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_EnterHibernateState), (40 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_EnterHibernateStateEx), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_IsHibernateDomainEnabled), (36 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetInput0), (60 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetPinMode), (56 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetPinOutputLevel), (52 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetRtcClockSource), (44 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetSR0Input), (44 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetStandbyClockSource), (44 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_SetWakeupTriggerInput), (60 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_HIB_TriggerEvent), (28 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_ClearEventStatus), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_DisableEvent), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_DisableNmiRequest), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_EnableEvent), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_EnableNmiRequest), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_SetEventHandler), (48 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERRUPT_TriggerEvent), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_INTERUPT_GetEventStatus), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_IRQHandler), (64 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorBusy), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorEnabled), (20 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_IsTemperatureSensorReady), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_ClearStatus), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_Disable), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_DisableTrapGeneration), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_Enable), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_EnableTrapGeneration), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_PARITY_GetStatus), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_POWER_DisableUsb), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_POWER_EnableUsb), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_POWER_GetEVR13Voltage), (32 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_POWER_GetEVR33Voltage), (36 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_RESET_AssertPeripheralReset), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_RESET_DeassertPeripheralReset), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_RESET_IsPeripheralResetAsserted), (36 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_ReadFromRetentionMemory), (48 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_ReadGPR), (16 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_SetBootMode), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_StartTemperatureMeasurement), (44 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_TRAP_ClearStatus), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_TRAP_Disable), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_TRAP_Enable), (24 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_TRAP_GetStatus), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_TRAP_Trigger), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_WriteGPR), (12 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_WriteToRetentionMemory), (48 bytes).
+    Removing xmc4_scu.o(i.XMC_SCU_lDelay), (44 bytes).
+    Removing xmc4_scu.o(.bss), (128 bytes).
+    Removing xmc_ccu4.o(.rev16_text), (4 bytes).
+    Removing xmc_ccu4.o(.revsh_text), (4 bytes).
+    Removing xmc_ccu4.o(.rrx_text), (6 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_DisableModule), (152 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_EnableModule), (156 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_Init), (38 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_Capture0Config), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_Capture1Config), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_CaptureInit), (32 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_CompareInit), (48 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_ConfigureEvent), (94 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_ConfigureStatusBitOverrideEvent), (90 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_CountConfig), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_DirectionConfig), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_EnableDithering), (36 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_GateConfig), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_GetCaptureRegisterValue), (12 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_GetCapturedValueFromFifo), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_GetLastCapturedTimerValue), (82 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_LoadConfig), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_ModulationConfig), (52 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetInput), (34 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetInterruptNode), (86 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetPassiveLevel), (14 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetPrescaler), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetTimerCountingMode), (22 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_SetTimerRepeatMode), (22 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_StartConfig), (36 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_StatusBitOverrideConfig), (14 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_StopConfig), (32 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SLICE_TrapConfig), (52 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SetModuleClock), (16 bytes).
+    Removing xmc_ccu4.o(i.XMC_CCU4_SetMultiChannelShadowTransferMode), (14 bytes).
+    Removing xmc_ccu8.o(.rev16_text), (4 bytes).
+    Removing xmc_ccu8.o(.revsh_text), (4 bytes).
+    Removing xmc_ccu8.o(.rrx_text), (6 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_DisableModule), (92 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_EnableModule), (96 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_Init), (38 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_Capture0Config), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_Capture1Config), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_CaptureInit), (40 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_CompareInit), (60 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_ConfigureDeadTime), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_ConfigureEvent), (94 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_ConfigureStatusBitOutput), (18 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_ConfigureStatusBitOverrideEvent), (90 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_CountConfig), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_DeadTimeInit), (14 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_DirectionConfig), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_EnableDithering), (36 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_GateConfig), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_GetCaptureRegisterValue), (12 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_GetCapturedValueFromFifo), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_GetLastCapturedTimerValue), (82 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_GetTimerCompareMatch), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_LoadConfig), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_LoadSelector), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_ModulationConfig), (62 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetDeadTimePrescaler), (18 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetDeadTimeValue), (20 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetInput), (34 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetInterruptNode), (94 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetOutPath), (14 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetPassiveLevel), (20 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetPrescaler), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetTimerCompareMatch), (10 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetTimerCountingMode), (20 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetTimerPeriodMatch), (4 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_SetTimerRepeatMode), (20 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_StartConfig), (36 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_StatusBitOverrideConfig), (14 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_StopConfig), (32 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SLICE_TrapConfig), (52 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SetModuleClock), (16 bytes).
+    Removing xmc_ccu8.o(i.XMC_CCU8_SetMultiChannelShadowTransferMode), (14 bytes).
+    Removing xmc_common.o(.rev16_text), (4 bytes).
+    Removing xmc_common.o(.revsh_text), (4 bytes).
+    Removing xmc_common.o(.rrx_text), (6 bytes).
+    Removing xmc_common.o(i.XMC_LIST_Add), (28 bytes).
+    Removing xmc_common.o(i.XMC_LIST_GetHead), (6 bytes).
+    Removing xmc_common.o(i.XMC_LIST_GetTail), (24 bytes).
+    Removing xmc_common.o(i.XMC_LIST_Init), (6 bytes).
+    Removing xmc_common.o(i.XMC_LIST_Insert), (18 bytes).
+    Removing xmc_common.o(i.XMC_LIST_Remove), (50 bytes).
+    Removing xmc_common.o(i.XMC_PRIOARRAY_Add), (128 bytes).
+    Removing xmc_common.o(i.XMC_PRIOARRAY_Init), (106 bytes).
+    Removing xmc_common.o(i.XMC_PRIOARRAY_Remove), (52 bytes).
+    Removing xmc_posif.o(.rev16_text), (4 bytes).
+    Removing xmc_posif.o(.revsh_text), (4 bytes).
+    Removing xmc_posif.o(.rrx_text), (6 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_Disable), (64 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_Enable), (72 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_HSC_Init), (28 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_Init), (26 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_MCM_Init), (30 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_QD_Init), (40 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_SelectInputSource), (44 bytes).
+    Removing xmc_posif.o(i.XMC_POSIF_SetInterruptNode), (26 bytes).
+    Removing xmc_uart.o(.rev16_text), (4 bytes).
+    Removing xmc_uart.o(.revsh_text), (4 bytes).
+    Removing xmc_uart.o(.rrx_text), (6 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_DisableEvent), (22 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_EnableEvent), (22 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_GetReceivedData), (26 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_Init), (116 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_SetBaudrate), (46 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_Stop), (52 bytes).
+    Removing xmc_uart.o(i.XMC_UART_CH_Transmit), (44 bytes).
+    Removing xmc_usic.o(.rev16_text), (4 bytes).
+    Removing xmc_usic.o(.revsh_text), (4 bytes).
+    Removing xmc_usic.o(.rrx_text), (6 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_ConfigExternalInputSignalToBRG), (72 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_Disable), (14 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_Enable), (120 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_RXFIFO_Configure), (48 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_RXFIFO_SetInterruptNodePointer), (24 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit), (34 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_SetBaudrate), (152 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_SetInterruptNodePointer), (20 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_TXFIFO_Configure), (44 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_TXFIFO_SetInterruptNodePointer), (24 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_CH_TXFIFO_SetSizeTriggerLimit), (34 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_Disable), (84 bytes).
+    Removing xmc_usic.o(i.XMC_USIC_Enable), (84 bytes).
+    Removing xmc_vadc.o(.rev16_text), (4 bytes).
+    Removing xmc_vadc.o(.revsh_text), (4 bytes).
+    Removing xmc_vadc.o(.rrx_text), (6 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundAbortSequence), (112 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundGetNumChannelsPending), (56 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundInit), (172 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundSelectGating), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundSelectTrigger), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundSelectTriggerEdge), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode), (34 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_BindGroupToEMux), (44 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_DisableModule), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_EnableModule), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_GetCompareResult), (22 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_Init), (50 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_InputClassInit), (44 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_SetBoundaries), (18 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_SetCompareValue), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_SetIndividualBoundary), (44 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_SetResultEventInterruptNode), (36 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GLOBAL_StartupCalibration), (60 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_AddResultToFifo), (22 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundDisableArbitrationSlot), (14 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_BackgroundEnableArbitrationSlot), (14 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelGetResultRegister), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelInit), (118 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelIsResultOutOfBounds), (42 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelSetBoundarySelection), (48 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelSetEventInterruptNode), (30 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelSetIclass), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelSetInputReference), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelSetResultRegister), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelTriggerEvent), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ChannelTriggerEventGenCriteria), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_CheckSlaveReadiness), (56 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_DisableChannelSyncRequest), (34 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_EnableChannelSyncRequest), (34 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_GetFastCompareResult), (28 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_GetResultFifoHead), (60 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_GetResultFifoTail), (94 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_IgnoreSlaveReadiness), (56 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_Init), (146 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_InputClassInit), (110 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_IsConverterBusy), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_IsResultRegisterFifoHead), (46 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueAbortSequence), (92 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueDisableArbitrationSlot), (14 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueGetInterruptedChannel), (28 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueGetLength), (38 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueGetNextChannel), (48 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueInit), (108 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueRemoveChannel), (108 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueSelectGating), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueSelectTrigger), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueSelectTriggerEdge), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_QueueSetReqSrcEventInterruptNode), (18 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanDisableArbitrationSlot), (14 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanGetNumChannelsPending), (38 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanInit), (114 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanRemoveChannel), (16 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanSelectGating), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanSelectTrigger), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanSelectTriggerEdge), (24 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanSequenceAbort), (80 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_ScanSetReqSrcEventInterruptNode), (20 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetBoundaries), (32 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetBoundaryEventInterruptNode), (30 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetChannelAlias), (38 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetIndividualBoundary), (40 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetPowerMode), (18 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetResultFastCompareValue), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetResultInterruptNode), (68 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetResultSubtractionValue), (18 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetSyncMaster), (14 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetSyncSlave), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_SetSyncSlaveReadySignal), (26 bytes).
+    Removing xmc_vadc.o(i.XMC_VADC_GROUP_TriggerServiceRequest), (36 bytes).
+    Removing xmc_vadc.o(.constdata), (16 bytes).
+    Removing system_xmc4700.o(.rev16_text), (4 bytes).
+    Removing system_xmc4700.o(.revsh_text), (4 bytes).
+    Removing system_xmc4700.o(.rrx_text), (6 bytes).
+
+351 unused section(s) (total 13166 bytes) removed from the image.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000850, Max: 0x00200000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000848, Max: 0x00200000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000200   Data   RO         2263    RESET               startup_xmc4700.o
+    0x08000200   0x00000008   Code   RO         2338  * !!!main             c_w.l(__main.o)
+    0x08000208   0x00000002   Code   RO         2367    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0800020a   0x00000004   Code   RO         2373    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2376    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2379    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2381    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2383    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2386    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2388    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2390    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2392    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2394    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2396    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2398    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2400    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2402    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2404    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2406    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2410    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2412    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2414    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0800020e   0x00000000   Code   RO         2416    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0800020e   0x00000002   Code   RO         2417    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000210   0x00000002   Code   RO         2437    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08000212   0x00000000   Code   RO         2450    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x08000212   0x00000000   Code   RO         2452    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x08000212   0x00000000   Code   RO         2455    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x08000212   0x00000000   Code   RO         2458    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x08000212   0x00000000   Code   RO         2460    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x08000212   0x00000000   Code   RO         2463    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x08000212   0x00000002   Code   RO         2464    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08000214   0x00000000   Code   RO         2340    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000214   0x00000000   Code   RO         2344    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000214   0x00000006   Code   RO         2356    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0800021a   0x00000000   Code   RO         2346    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0800021a   0x00000004   Code   RO         2347    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0800021e   0x00000000   Code   RO         2349    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0800021e   0x00000008   Code   RO         2350    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x08000226   0x00000002   Code   RO         2371    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000228   0x00000000   Code   RO         2419    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000228   0x00000004   Code   RO         2420    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0800022c   0x00000006   Code   RO         2421    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000232   0x00000002   PAD
+    0x08000234   0x00000038   Code   RO         2264    .text               startup_xmc4700.o
+    0x0800026c   0x0000008a   Code   RO         2334    .text               c_w.l(rt_memcpy_v6.o)
+    0x080002f6   0x00000006   Code   RO         2336    .text               c_w.l(heapauxi.o)
+    0x080002fc   0x00000064   Code   RO         2341    .text               c_w.l(rt_memcpy_w.o)
+    0x08000360   0x0000004a   Code   RO         2358    .text               c_w.l(sys_stackheap_outer.o)
+    0x080003aa   0x00000012   Code   RO         2360    .text               c_w.l(exit.o)
+    0x080003bc   0x00000008   Code   RO         2368    .text               c_w.l(libspace.o)
+    0x080003c4   0x0000000c   Code   RO         2429    .text               c_w.l(sys_exit.o)
+    0x080003d0   0x00000002   Code   RO         2440    .text               c_w.l(use_no_semi.o)
+    0x080003d2   0x00000000   Code   RO         2442    .text               c_w.l(indicate_semi.o)
+    0x080003d2   0x00000002   PAD
+    0x080003d4   0x00000014   Code   RO           75    i.Delay_ms          mcuinit.o
+    0x080003e8   0x000000ac   Code   RO           76    i.MCUInit           mcuinit.o
+    0x08000494   0x00000008   Code   RO         2271    i.OSCHP_GetFrequency  system_xmc4700.o
+    0x0800049c   0x00000002   Code   RO          233    i.POSIF0_0_IRQHandler  posif.o
+    0x0800049e   0x00000002   PAD
+    0x080004a0   0x00000048   Code   RO           77    i.SysTick_Handler   mcuinit.o
+    0x080004e8   0x00000214   Code   RO         2272    i.SystemCoreClockSetup  system_xmc4700.o
+    0x080006fc   0x000000a4   Code   RO         2273    i.SystemCoreClockUpdate  system_xmc4700.o
+    0x080007a0   0x00000058   Code   RO         2274    i.SystemCoreSetup   system_xmc4700.o
+    0x080007f8   0x0000001c   Code   RO         2275    i.SystemInit        system_xmc4700.o
+    0x08000814   0x00000018   Code   RO         2276    i.delay             system_xmc4700.o
+    0x0800082c   0x00000010   Code   RO            4    i.main              main.o
+    0x0800083c   0x0000000a   Code   RO         2427    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08000846   0x00000002   PAD
+    0x08000848   0x00000000   Data   RO         2495    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000a68, Max: 0x0003ffc0, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000008   Data   RW           78    .data               mcuinit.o
+    0x20000008   0x00000060   Zero   RW         2369    .bss                c_w.l(libspace.o)
+    0x20000068   0x00000200   Zero   RW         2262    HEAP                startup_xmc4700.o
+    0x20000268   0x00000800   Zero   RW         2261    STACK               startup_xmc4700.o
+
+
+
+  Load Region LR$$.ARM.__AT_0x2003FFC0 (Base: 0x2003ffc0, Size: 0x00000000, Max: 0x00000004, ABSOLUTE)
+
+    Execution Region ER$$.ARM.__AT_0x2003FFC0 (Base: 0x2003ffc0, Size: 0x00000000, Max: 0x00000004, ABSOLUTE, UNINIT)
+
+    **** No section assigned to this execution region ****
+
+
+
+  Load Region LR$$.ARM.__AT_0x2003FFC4 (Base: 0x2003ffc4, Size: 0x00000000, Max: 0x00000010, ABSOLUTE)
+
+    Execution Region ER$$.ARM.__AT_0x2003FFC4 (Base: 0x2003ffc4, Size: 0x00000000, Max: 0x00000010, ABSOLUTE, UNINIT)
+
+    **** No section assigned to this execution region ****
+
